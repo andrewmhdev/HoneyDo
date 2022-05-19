@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sq2-7u-nX8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Honey-Do List-->
+        <scene sceneID="AJ7-zv-KSH">
+            <objects>
+                <tableViewController id="F5c-Hc-CYk" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="zDI-G0-v8i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1083266214" green="0.1083283797" blue="0.1385256946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="0.1083266214" green="0.1083283797" blue="0.1385256946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="wzT-dl-8b4">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wzT-dl-8b4" id="Any-oM-Za8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Task Name)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csc-xJ-zdt">
+                                            <rect key="frame" x="24" y="15" width="338" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJ7-ep-0DI">
+                                            <rect key="frame" x="366" y="18" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="iSv-Hm-QhB" userLabel="width = 60"/>
+                                                <constraint firstAttribute="height" constant="44" id="jcG-Kt-qaL"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle" catalog="system"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.15744033460000001" green="0.92504143709999997" blue="0.99998575450000005" alpha="0.4954621776" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="wJ7-ep-0DI" secondAttribute="trailing" constant="4" id="6eu-VE-yvG"/>
+                                        <constraint firstItem="Csc-xJ-zdt" firstAttribute="top" secondItem="Any-oM-Za8" secondAttribute="topMargin" constant="4" id="8TG-7f-7EC"/>
+                                        <constraint firstItem="wJ7-ep-0DI" firstAttribute="leading" secondItem="Csc-xJ-zdt" secondAttribute="trailing" constant="4" id="B3F-yt-WD4"/>
+                                        <constraint firstItem="Csc-xJ-zdt" firstAttribute="leading" secondItem="Any-oM-Za8" secondAttribute="leadingMargin" constant="4" id="HwG-Yz-Hbn"/>
+                                        <constraint firstItem="wJ7-ep-0DI" firstAttribute="centerY" secondItem="Any-oM-Za8" secondAttribute="centerY" id="Rlz-bl-Fw7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Csc-xJ-zdt" secondAttribute="bottom" constant="4" id="Wor-iM-uID"/>
+                                        <constraint firstItem="Csc-xJ-zdt" firstAttribute="centerY" secondItem="Any-oM-Za8" secondAttribute="centerY" id="oNc-aj-8X4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="F5c-Hc-CYk" id="53a-7g-Jxp"/>
+                            <outlet property="delegate" destination="F5c-Hc-CYk" id="uXv-8g-EVu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Honey-Do List" id="8dG-1Z-6Tq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2hx-Mt-FAb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5hc-dY-Fb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828.98550724637687" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FxW-6k-SBj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sq2-7u-nX8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YFv-HN-TZb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1083266214" green="0.1083283797" blue="0.1385256946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.1083266214" green="0.1083283797" blue="0.1385256946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="F5c-Hc-CYk" kind="relationship" relationship="rootViewController" id="Iy1-cO-9St"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4OS-sI-nDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81.159420289855078" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.rectangle" catalog="system" width="128" height="93"/>
+    </resources>
+</document>
